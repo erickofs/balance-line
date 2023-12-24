@@ -32,8 +32,8 @@ while cline and nline:
             cline = nline
             # Leia próxima nline
             nline = in_file.readline().strip()
-        # Se cline > nline
-        if cline > nline:
+        # Se cline > nline e nline não for vazio:
+        if cline > nline and nline != '':
             # Adicione +1 a i
             i += 1
             # Escreva nline em out_file
@@ -70,7 +70,7 @@ while i > 0:
                 cline = nline
                 # Leia próxima nline
                 nline = in_file.readline().strip()
-            # Se cline > nline
+            # Se cline > nline e nline não for vazio:
             if cline > nline and nline != '':
                 # Adicione +1 a i
                 i += 1
