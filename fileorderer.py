@@ -44,6 +44,12 @@ while cline and nline:
     out_file.write(cline)
 # Feche o arquivo output
 out_file.close()
+# Feche o arquivo input
+in_file.close()
+# Verifique se o arquivo input existe
+if os.path.exists(in_file_name):
+    # Remova o arquivo input
+    os.remove(in_file_name)
 # Renomeie o arquivo output como 'in_file'
 os.rename(out_file_name, in_file_name)
 # Enquanto i > 0:
@@ -84,5 +90,7 @@ while i > 0:
     out_file.close()
     # Feche o arquivo input
     in_file.close()
+    # Remova o arquivo input
+    os.remove(in_file_name)
 # Print "Arquivo ordenado com sucesso"
 print("Arquivo ordenado com sucesso!")
